@@ -13,6 +13,8 @@ mkdir -p /root/.ssh
 echo "$LOCAL_MIRROR_PRIVATE" > "/root/.ssh/id_ed25519"
 set -x
 echo "$LOCAL_MIRROR_PUBLIC" > "/root/.ssh/id_ed25519.pub"
+#change permission on .ssh folder
+chmod -R 700 /root/.ssh/
 # change the permissions on the keys
 chmod 0600 /root/.ssh/*
 # Upload to local mirror
